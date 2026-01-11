@@ -18,7 +18,6 @@
       scroll-behavior:smooth;
     }
 
-    /* ===== HEADER ===== */
     header{
       position:fixed;
       top:0;
@@ -47,7 +46,6 @@
       color:#f5c542;
     }
 
-    /* ===== SLIDER ===== */
     .slider{
       margin-top:80px;
       height:90vh;
@@ -73,8 +71,8 @@
       position:absolute;
       bottom:25%;
       left:10%;
-      background:rgba(0,0,0,0.6);
-      padding:25px;
+      background:rgba(0,0,0,0.5);
+      padding:20px;
       color:#fff;
       animation:slideUp 1.2s ease;
     }
@@ -93,7 +91,6 @@
       font-weight:bold;
     }
 
-    /* ===== SECTION ===== */
     section{
       padding:80px 10%;
     }
@@ -101,60 +98,45 @@
     .section-title{
       font-size:32px;
       margin-bottom:20px;
-      animation:fadeIn 1.2s ease;
+      text-align:center;
     }
 
-    /* ===== ABOUT ===== */
-    .about{
+    .about, .products-imgs, .features-imgs{
       display:grid;
+      gap:20px;
+    }
+
+    .about{
       grid-template-columns:2fr 1fr;
-      gap:40px;
       align-items:center;
     }
 
     .about img{
       width:100%;
       border-radius:10px;
-    }
-
-    .experience{
-      background:#1e4fa1;
-      color:#fff;
-      text-align:center;
-      padding:40px;
-      font-size:28px;
-    }
-
-    /* ===== PRODUCTS ===== */
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .product{
-      background:#1e4fa1;
-      color:#fff;
-      padding:20px;
-      border-radius:8px;
       animation:fadeIn 1.5s ease;
     }
 
-    /* ===== FEATURES ===== */
-    .features{
-      display:grid;
+    .products-imgs{
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
     }
 
-    .feature{
-      background:#111;
-      color:#fff;
-      padding:30px;
+    .products-imgs img{
+      width:100%;
       border-radius:8px;
+      animation:fadeIn 1.2s ease;
     }
 
-    /* ===== STATS ===== */
+    .features-imgs{
+      grid-template-columns:1fr 1fr;
+    }
+
+    .features-imgs img{
+      width:100%;
+      border-radius:8px;
+      animation:fadeIn 1.2s ease;
+    }
+
     .stats{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -167,19 +149,6 @@
       font-size:36px;
     }
 
-    /* ===== WHY ===== */
-    .why{
-      background:#000;
-      color:#fff;
-    }
-
-    .why-items{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    /* ===== FAQ ===== */
     details{
       margin-bottom:15px;
     }
@@ -189,14 +158,13 @@
       cursor:pointer;
     }
 
-    /* ===== FOOTER ===== */
     footer{
       background:#000;
       color:#fff;
       padding:50px 10%;
+      text-align:center;
     }
 
-    /* ===== WHATSAPP BUTTON ===== */
     .whatsapp{
       position:fixed;
       bottom:20px;
@@ -211,12 +179,10 @@
       z-index:999;
     }
 
-    /* ===== ANIMATIONS ===== */
     @keyframes fadeIn{
       from{opacity:0; transform:translateY(20px);}
       to{opacity:1; transform:translateY(0);}
     }
-
     @keyframes slideUp{
       from{opacity:0; transform:translateY(40px);}
       to{opacity:1; transform:translateY(0);}
@@ -230,6 +196,7 @@
         flex-direction:column;
       }
     }
+
   </style>
 </head>
 
@@ -248,63 +215,61 @@
 
 <!-- SLIDER -->
 <div class="slider">
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1589927986089-35812388d1b4');">
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1610878180933-e82b6a9f1dc9');">
     <div class="slide-content">
       <h1>Fresh Mango Export Specialists</h1>
-      <a class="btn">Read More</a>
+      <a class="btn">Learn More</a>
     </div>
   </div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1592928300410-f9b6a3a64c02');">
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1574226516831-e1dff420e10b');">
     <div class="slide-content">
-      <h1>Premium Fruits for Global Markets</h1>
-      <a class="btn">Read More</a>
+      <h1>Quality Fruits for Global Markets</h1>
+      <a class="btn">Learn More</a>
     </div>
   </div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1606788075764-13c36e2e6c1a');">
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1598511726390-08104598a213');">
     <div class="slide-content">
-      <h1>Quality Onion & Vegetable Exporter</h1>
-      <a class="btn">Read More</a>
+      <h1>Premium Onion & Vegetable Exports</h1>
+      <a class="btn">Learn More</a>
     </div>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
+  <h2 class="section-title">About Us</h2>
   <div class="about">
     <div>
-      <h2 class="section-title">About Us</h2>
       <p>
         At <strong>Anjaniputra Exim</strong>, we don’t just export goods — we export
-        trust, quality, and long-term value. We ensure reliable global shipping,
-        quality assurance, and hassle-free exports.
+        trust, quality, and long-term value. We ensure reliable global delivery,
+        professional handling and customer satisfaction in every shipment.
       </p>
     </div>
-    <div class="experience">
-      8 <br> Years of Excellence
-    </div>
+
+    <img src="https://images.unsplash.com/photo-1506619216599-9d16f9d40b57" alt="About Export">
   </div>
 </section>
 
 <!-- PRODUCTS -->
 <section id="products">
   <h2 class="section-title">Our Products</h2>
-  <div class="products">
-    <div class="product">Fruits</div>
-    <div class="product">Vegetables</div>
-    <div class="product">Onions</div>
-    <div class="product">Confectionery</div>
+  <div class="products-imgs">
+    <img src="https://images.unsplash.com/photo-1617191513568-23b8651f7a7c" alt="Fruits">
+    <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" alt="Vegetables">
+    <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Onions">
+    <img src="https://images.unsplash.com/photo-1585238342024-78f01b62449d" alt="Confectionery">
   </div>
 </section>
 
 <!-- FEATURES -->
 <section id="features">
   <h2 class="section-title">Our Features</h2>
-  <div class="features">
-    <div class="feature">Trusted Suppliers</div>
-    <div class="feature">Global Shipping</div>
-    <div class="feature">Quality Assurance</div>
+  <div class="features-imgs">
+    <img src="https://images.unsplash.com/photo-1609942252061-5d9bf2d59c24" alt="Suppliers">
+    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818" alt="Global Shipping">
   </div>
 </section>
 
@@ -318,29 +283,16 @@
   </div>
 </section>
 
-<!-- WHY -->
-<section class="why">
-  <h2 class="section-title">Why Anjaniputra Exim?</h2>
-  <div class="why-items">
-    <div>Honesty & Integrity</div>
-    <div>Innovation & Growth</div>
-    <div>Teamwork</div>
-    <div>Transparency</div>
-    <div>Wide Product Range</div>
-    <div>Customer Satisfaction</div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq">
   <h2 class="section-title">FAQ</h2>
   <details>
     <summary>What products do you export?</summary>
-    <p>We export fruits, vegetables, onions and agri-products.</p>
+    <p>We export fresh fruits, vegetables, onions and more.</p>
   </details>
   <details>
-    <summary>Do you handle logistics?</summary>
-    <p>Yes, complete export documentation & shipping.</p>
+    <summary>Do you handle complete shipping?</summary>
+    <p>Yes, we manage export documentation & logistics support.</p>
   </details>
 </section>
 
@@ -354,16 +306,15 @@
   <p>© 2026 Anjaniputra Exim. All Rights Reserved.</p>
 </footer>
 
-<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/919898789831" target="_blank">💬</a>
 
 <script>
   const slides=document.querySelectorAll('.slide');
-  let i=0;
+  let idx=0;
   setInterval(()=>{
-    slides[i].classList.remove('active');
-    i=(i+1)%slides.length;
-    slides[i].classList.add('active');
+    slides[idx].classList.remove('active');
+    idx=(idx+1)%slides.length;
+    slides[idx].classList.add('active');
   },4000);
 </script>
 
