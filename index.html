@@ -1,340 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Anjaniputra Exim | Import Export</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Anjaniputra Exim | Import Export Company</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<!-- ===== SEO BASIC ===== -->
+<meta name="description" content="Anjaniputra Exim - Trusted Import Export Company from India. Fruits, Vegetables, Onions, Rice & Agro Products Exporter.">
 
-    body {
-      line-height: 1.6;
-      color: #222;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{color:#222}
 
-    /* ===== HEADER ===== */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #000;
-      color: #fff;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
+/* ===== HEADER ===== */
+header{
+position:fixed;top:0;width:100%;
+background:#000;color:#fff;
+display:flex;justify-content:space-between;
+align-items:center;padding:15px 40px;
+z-index:1000
+}
+header h2{color:#f4c430}
+nav a{color:#fff;text-decoration:none;margin:0 12px;font-size:14px}
+nav a:hover{color:#f4c430}
 
-    header h2 {
-      color: #f5c542;
-    }
+/* ===== SLIDER ===== */
+.slider{margin-top:80px;height:90vh;position:relative;overflow:hidden}
+.slide{
+position:absolute;width:100%;height:100%;
+background-size:cover;background-position:center;
+opacity:0;transition:opacity 1s
+}
+.slide.active{opacity:1}
+.slide-content{
+position:absolute;bottom:20%;left:8%;
+background:rgba(0,0,0,0.6);
+color:#fff;padding:20px;max-width:500px
+}
+.slide-content h1{font-size:34px;margin-bottom:10px}
+.btn{
+display:inline-block;margin-top:10px;
+padding:10px 20px;
+background:#f4c430;color:#000;
+text-decoration:none;font-weight:bold
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-size: 14px;
-    }
+/* ===== SECTION ===== */
+section{padding:80px 10%}
+.section-title{font-size:32px;margin-bottom:20px}
 
-    nav a:hover {
-      color: #f5c542;
-    }
+/* ===== ABOUT ===== */
+.about{display:grid;grid-template-columns:2fr 1fr;gap:40px}
+.experience{
+background:#1e4fa1;color:#fff;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+font-size:28px;padding:30px
+}
 
-    /* ===== SLIDER ===== */
-    .slider {
-      margin-top: 80px;
-      height: 90vh;
-      position: relative;
-      overflow: hidden;
-    }
+/* ===== PRODUCTS ===== */
+.products{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
+.product{
+background:#1e4fa1;color:#fff;padding:20px
+}
+.product img{width:100%;height:180px;object-fit:cover}
 
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
+/* ===== FEATURES ===== */
+.features{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
+.feature{background:#111;color:#fff;padding:30px}
 
-    .slide.active {
-      opacity: 1;
-    }
+/* ===== STATS ===== */
+.stats{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+text-align:center;gap:20px
+}
+.stat h2{color:#1e4fa1;font-size:36px}
 
-    .slide-content {
-      position: absolute;
-      bottom: 20%;
-      left: 10%;
-      color: #fff;
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-      max-width: 500px;
-    }
+/* ===== WHY ===== */
+.why{background:#000;color:#fff}
+.why-items{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
 
-    .slide-content h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+/* ===== FAQ ===== */
+details{margin-bottom:15px}
+details summary{cursor:pointer;font-weight:bold}
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #f5c542;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* ===== FOOTER ===== */
+footer{background:#000;color:#fff;padding:60px 10%}
+footer p{margin:6px 0}
 
-    /* ===== SECTION ===== */
-    section {
-      padding: 80px 10%;
-    }
+/* ===== WHATSAPP ===== */
+.whatsapp{
+position:fixed;right:20px;bottom:20px;
+background:#25d366;color:#fff;
+width:55px;height:55px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+font-size:30px;text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.4)
+}
 
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    /* ===== ABOUT ===== */
-    .about {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .experience {
-      background: #1e4fa1;
-      color: #fff;
-      text-align: center;
-      padding: 40px;
-      font-size: 28px;
-    }
-
-    /* ===== PRODUCTS ===== */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .product {
-      background: #1e4fa1;
-      color: #fff;
-      padding: 20px;
-    }
-
-    /* ===== FEATURES ===== */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .feature {
-      background: #111;
-      color: #fff;
-      padding: 30px;
-    }
-
-    /* ===== STATS ===== */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      text-align: center;
-      gap: 20px;
-    }
-
-    .stat h2 {
-      color: #1e4fa1;
-      font-size: 36px;
-    }
-
-    /* ===== WHY US ===== */
-    .why {
-      background: #000;
-      color: #fff;
-    }
-
-    .why-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    /* ===== FAQ ===== */
-    details {
-      margin-bottom: 15px;
-    }
-
-    details summary {
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #000;
-      color: #fff;
-      padding: 50px 10%;
-    }
-
-    footer a {
-      color: #f5c542;
-      text-decoration: none;
-    }
-
-    @media(max-width: 768px) {
-      .about {
-        grid-template-columns: 1fr;
-      }
-      header {
-        flex-direction: column;
-      }
-    }
-  </style>
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+.about{grid-template-columns:1fr}
+header{flex-direction:column}
+.slide-content h1{font-size:26px}
+}
+</style>
 </head>
 
 <body>
 
 <!-- ===== HEADER ===== -->
 <header>
-  <h2>Anjaniputra Exim</h2>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#features">Features</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h2>Anjaniputra Exim</h2>
+<nav>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#features">Features</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <!-- ===== SLIDER ===== -->
 <div class="slider">
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d');">
-    <div class="slide-content">
-      <h1>Fresh Mango Export Specialists</h1>
-      <a class="btn">Read More</a>
-    </div>
-  </div>
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1606788075764-13c36e2e6c1a?q=80&w=1600')">
+<div class="slide-content">
+<h1>Fresh Mango Export Specialists</h1>
+<a class="btn">Read More</a>
+</div>
+</div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1606788075764-13c36e2e6c1a');">
-    <div class="slide-content">
-      <h1>Premium Rice Exporter Solutions</h1>
-      <a class="btn">Read More</a>
-    </div>
-  </div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1621939514649-280e2ee25f60?q=80&w=1600')">
+<div class="slide-content">
+<h1>Premium Rice Exporter Solutions</h1>
+<a class="btn">Read More</a>
+</div>
+</div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1615484477778-ca3b77940c25');">
-    <div class="slide-content">
-      <h1>India's Top Onion Exporter</h1>
-      <a class="btn">Read More</a>
-    </div>
-  </div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1615484477778-ca3b77940c25?q=80&w=1600')">
+<div class="slide-content">
+<h1>India's Trusted Onion Exporter</h1>
+<a class="btn">Read More</a>
+</div>
+</div>
 </div>
 
 <!-- ===== ABOUT ===== -->
 <section id="about">
-  <div class="about">
-    <div>
-      <h2 class="section-title">About Us</h2>
-      <p>
-        At <strong>Anjaniputra Exim</strong>, we don’t just export goods — we export
-        trust, quality, and long-term value. We provide seamless global shipping,
-        customs clearance, and freight forwarding services to international markets.
-      </p>
-    </div>
-    <div class="experience">
-      8 <br> Years of Excellence
-    </div>
-  </div>
+<div class="about">
+<div>
+<h2 class="section-title">About Us</h2>
+<p>
+At <strong>Anjaniputra Exim</strong>, we don’t just export products —
+we export trust, quality, and long-term value.
+We provide seamless global shipping, customs clearance,
+and reliable supply chain solutions to international markets.
+</p>
+</div>
+<div class="experience">
+8+<br>Years of Excellence
+</div>
+</div>
 </section>
 
 <!-- ===== PRODUCTS ===== -->
 <section id="products">
-  <h2 class="section-title">Our Products</h2>
-  <div class="products">
-    <div class="product">Fruits</div>
-    <div class="product">Vegetables</div>
-    <div class="product">Confectionery</div>
-    <div class="product">Onions</div>
-  </div>
+<h2 class="section-title">Our Products</h2>
+<div class="products">
+<div class="product">
+<img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=800">
+<h3>Fruits</h3>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800">
+<h3>Vegetables</h3>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?q=80&w=800">
+<h3>Confectionery</h3>
+</div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1604908554261-8c30d0a3fa56?q=80&w=800">
+<h3>Onions</h3>
+</div>
+</div>
 </section>
 
 <!-- ===== FEATURES ===== -->
 <section id="features">
-  <h2 class="section-title">Our Features</h2>
-  <div class="features">
-    <div class="feature">Trusted Suppliers</div>
-    <div class="feature">Global Shipping</div>
-    <div class="feature">Quality Assurance</div>
-  </div>
+<h2 class="section-title">Our Features</h2>
+<div class="features">
+<div class="feature">Trusted Suppliers</div>
+<div class="feature">Global Shipping</div>
+<div class="feature">Quality Assurance</div>
+</div>
 </section>
 
 <!-- ===== STATS ===== -->
 <section>
-  <div class="stats">
-    <div class="stat"><h2>8+</h2>Years of Experience</div>
-    <div class="stat"><h2>2000+</h2>Tons Export Annually</div>
-    <div class="stat"><h2>20+</h2>Countries Exported</div>
-    <div class="stat"><h2>1000+</h2>Customer Satisfaction</div>
-  </div>
+<div class="stats">
+<div class="stat"><h2>8+</h2>Years Experience</div>
+<div class="stat"><h2>2000+</h2>Tons Exported</div>
+<div class="stat"><h2>20+</h2>Countries</div>
+<div class="stat"><h2>1000+</h2>Happy Clients</div>
+</div>
 </section>
 
-<!-- ===== WHY US ===== -->
+<!-- ===== WHY ===== -->
 <section class="why">
-  <h2 class="section-title">Why Anjaniputra Exim?</h2>
-  <div class="why-items">
-    <div>Honesty & Integrity</div>
-    <div>Innovation & Change</div>
-    <div>Teamwork</div>
-    <div>Open Communication</div>
-    <div>Variety of Products</div>
-    <div>Satisfaction Guarantee</div>
-  </div>
+<h2 class="section-title">Why Anjaniputra Exim?</h2>
+<div class="why-items">
+<div>Honesty & Integrity</div>
+<div>Innovation & Growth</div>
+<div>Teamwork</div>
+<div>Open Communication</div>
+<div>Variety of Products</div>
+<div>Satisfaction Guarantee</div>
+</div>
 </section>
 
 <!-- ===== FAQ ===== -->
 <section id="faq">
-  <h2 class="section-title">FAQ – Anjaniputra Exim</h2>
-  <details>
-    <summary>What products do you export?</summary>
-    <p>We export fruits, vegetables, rice, spices, onions and agri-products.</p>
-  </details>
-  <details>
-    <summary>Do you handle customs clearance and documentation?</summary>
-    <p>Yes, we provide complete export documentation and logistics support.</p>
-  </details>
+<h2 class="section-title">FAQ</h2>
+<details><summary>What products do you export?</summary><p>Agro products, fruits, vegetables, rice, onions.</p></details>
+<details><summary>Do you handle customs clearance?</summary><p>Yes, complete logistics support.</p></details>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer id="contact">
-  <h2>Get in Touch</h2>
-  <p>Email: anjaniputraexim@gmail.com</p>
-  <p>Phone: +91 98987 89831</p>
-  <p>Ahmedabad, Gujarat, India</p>
-  <br>
-  <p>© 2026 Anjaniputra Exim. All Rights Reserved.</p>
+<h2>Get in Touch</h2>
+<p>Email: anjaniputraexim@gmail.com</p>
+<p>Phone: +91 98987 89831</p>
+<p>Ahmedabad, Gujarat, India</p>
+<p>© 2026 Anjaniputra Exim. All Rights Reserved.</p>
 </footer>
 
-<script>
-  const slides = document.querySelectorAll('.slide');
-  let index = 0;
+<!-- ===== WHATSAPP ===== -->
+<a class="whatsapp" href="https://wa.me/919898789831" target="_blank">💬</a>
 
-  setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-  }, 4000);
+<script>
+let slides=document.querySelectorAll('.slide');
+let i=0;
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},4000);
 </script>
 
 </body>
