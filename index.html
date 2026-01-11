@@ -5,7 +5,6 @@
 <title>Anjaniputra Exim | Import Export Company</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ===== SEO BASIC ===== -->
 <meta name="description" content="Anjaniputra Exim - Trusted Import Export Company from India. Fruits, Vegetables, Onions, Rice & Agro Products Exporter.">
 
 <style>
@@ -61,20 +60,34 @@ font-size:28px;padding:30px
 
 /* ===== PRODUCTS ===== */
 .products{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px
 }
 .product{
-background:#1e4fa1;color:#fff;padding:20px
+background:#1e4fa1;color:#fff;
+padding:25px;text-align:center;
+border-radius:8px
 }
-.product img{width:100%;height:180px;object-fit:cover}
+.product img{
+width:60px;height:60px;margin-bottom:12px
+}
+.product:hover{transform:translateY(-5px);transition:.3s}
 
 /* ===== FEATURES ===== */
 .features{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px
 }
-.feature{background:#111;color:#fff;padding:30px}
+.feature{
+background:#111;color:#fff;
+padding:30px;text-align:center;
+border-radius:8px
+}
+.feature img{
+width:55px;height:55px;margin-bottom:12px;
+filter:invert(1)
+}
+.feature:hover{background:#1e4fa1;transition:.3s}
 
 /* ===== STATS ===== */
 .stats{
@@ -104,7 +117,7 @@ position:fixed;right:20px;bottom:20px;
 background:#25d366;color:#fff;
 width:55px;height:55px;border-radius:50%;
 display:flex;align-items:center;justify-content:center;
-font-size:30px;text-decoration:none;
+font-size:28px;text-decoration:none;
 box-shadow:0 4px 10px rgba(0,0,0,0.4)
 }
 
@@ -161,10 +174,9 @@ header{flex-direction:column}
 <div>
 <h2 class="section-title">About Us</h2>
 <p>
-At <strong>Anjaniputra Exim</strong>, we don’t just export products —
-we export trust, quality, and long-term value.
+At <strong>Anjaniputra Exim</strong>, we export trust, quality, and long-term value.
 We provide seamless global shipping, customs clearance,
-and reliable supply chain solutions to international markets.
+and reliable supply chain solutions worldwide.
 </p>
 </div>
 <div class="experience">
@@ -177,22 +189,27 @@ and reliable supply chain solutions to international markets.
 <section id="products">
 <h2 class="section-title">Our Products</h2>
 <div class="products">
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=800">
+<img src="https://cdn-icons-png.flaticon.com/512/2909/2909761.png">
 <h3>Fruits</h3>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800">
+<img src="https://cdn-icons-png.flaticon.com/512/3081/3081967.png">
 <h3>Vegetables</h3>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?q=80&w=800">
+<img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
 <h3>Confectionery</h3>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1604908554261-8c30d0a3fa56?q=80&w=800">
+<img src="https://cdn-icons-png.flaticon.com/512/766/766208.png">
 <h3>Onions</h3>
 </div>
+
 </div>
 </section>
 
@@ -200,9 +217,22 @@ and reliable supply chain solutions to international markets.
 <section id="features">
 <h2 class="section-title">Our Features</h2>
 <div class="features">
-<div class="feature">Trusted Suppliers</div>
-<div class="feature">Global Shipping</div>
-<div class="feature">Quality Assurance</div>
+
+<div class="feature">
+<img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+<h3>Trusted Suppliers</h3>
+</div>
+
+<div class="feature">
+<img src="https://cdn-icons-png.flaticon.com/512/3126/3126647.png">
+<h3>Global Shipping</h3>
+</div>
+
+<div class="feature">
+<img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png">
+<h3>Quality Assurance</h3>
+</div>
+
 </div>
 </section>
 
