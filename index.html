@@ -1,204 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Horizon Exim | Import Export</title>
+  <meta charset="UTF-8">
+  <title>Anjaniputra Exim | Import Export</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
     }
 
-    body {
-      line-height: 1.6;
-      color: #222;
+    body{
+      color:#222;
+      scroll-behavior:smooth;
     }
 
     /* ===== HEADER ===== */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #000;
-      color: #fff;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:#000;
+      color:#fff;
+      padding:15px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
     }
 
-    header h2 {
-      color: #f5c542;
+    header h2{
+      color:#f5c542;
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-size: 14px;
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin:0 12px;
+      font-size:14px;
     }
 
-    nav a:hover {
-      color: #f5c542;
+    nav a:hover{
+      color:#f5c542;
     }
 
     /* ===== SLIDER ===== */
-    .slider {
-      margin-top: 80px;
-      height: 90vh;
-      position: relative;
-      overflow: hidden;
+    .slider{
+      margin-top:80px;
+      height:90vh;
+      position:relative;
+      overflow:hidden;
     }
 
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
+    .slide{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background-size:cover;
+      background-position:center;
+      opacity:0;
+      transition:opacity 1s ease;
     }
 
-    .slide.active {
-      opacity: 1;
+    .slide.active{
+      opacity:1;
     }
 
-    .slide-content {
-      position: absolute;
-      bottom: 20%;
-      left: 10%;
-      color: #fff;
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-      max-width: 500px;
+    .slide-content{
+      position:absolute;
+      bottom:25%;
+      left:10%;
+      background:rgba(0,0,0,0.6);
+      padding:25px;
+      color:#fff;
+      animation:slideUp 1.2s ease;
     }
 
-    .slide-content h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+    .slide-content h1{
+      font-size:36px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #f5c542;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
+    .btn{
+      display:inline-block;
+      margin-top:12px;
+      padding:10px 22px;
+      background:#f5c542;
+      color:#000;
+      text-decoration:none;
+      font-weight:bold;
     }
 
     /* ===== SECTION ===== */
-    section {
-      padding: 80px 10%;
+    section{
+      padding:80px 10%;
     }
 
-    .section-title {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .section-title{
+      font-size:32px;
+      margin-bottom:20px;
+      animation:fadeIn 1.2s ease;
     }
 
     /* ===== ABOUT ===== */
-    .about {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 40px;
-      align-items: center;
+    .about{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:40px;
+      align-items:center;
     }
 
-    .experience {
-      background: #1e4fa1;
-      color: #fff;
-      text-align: center;
-      padding: 40px;
-      font-size: 28px;
+    .about img{
+      width:100%;
+      border-radius:10px;
+    }
+
+    .experience{
+      background:#1e4fa1;
+      color:#fff;
+      text-align:center;
+      padding:40px;
+      font-size:28px;
     }
 
     /* ===== PRODUCTS ===== */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
     }
 
-    .product {
-      background: #1e4fa1;
-      color: #fff;
-      padding: 20px;
+    .product{
+      background:#1e4fa1;
+      color:#fff;
+      padding:20px;
+      border-radius:8px;
+      animation:fadeIn 1.5s ease;
     }
 
     /* ===== FEATURES ===== */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
     }
 
-    .feature {
-      background: #111;
-      color: #fff;
-      padding: 30px;
+    .feature{
+      background:#111;
+      color:#fff;
+      padding:30px;
+      border-radius:8px;
     }
 
     /* ===== STATS ===== */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      text-align: center;
-      gap: 20px;
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      text-align:center;
     }
 
-    .stat h2 {
-      color: #1e4fa1;
-      font-size: 36px;
+    .stat h2{
+      color:#1e4fa1;
+      font-size:36px;
     }
 
-    /* ===== WHY US ===== */
-    .why {
-      background: #000;
-      color: #fff;
+    /* ===== WHY ===== */
+    .why{
+      background:#000;
+      color:#fff;
     }
 
-    .why-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .why-items{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
     }
 
     /* ===== FAQ ===== */
-    details {
-      margin-bottom: 15px;
+    details{
+      margin-bottom:15px;
     }
 
-    details summary {
-      font-weight: bold;
-      cursor: pointer;
+    details summary{
+      font-weight:bold;
+      cursor:pointer;
     }
 
     /* ===== FOOTER ===== */
-    footer {
-      background: #000;
-      color: #fff;
-      padding: 50px 10%;
+    footer{
+      background:#000;
+      color:#fff;
+      padding:50px 10%;
     }
 
-    footer a {
-      color: #f5c542;
-      text-decoration: none;
+    /* ===== WHATSAPP BUTTON ===== */
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:#fff;
+      padding:15px;
+      border-radius:50%;
+      font-size:24px;
+      text-decoration:none;
+      box-shadow:0 0 10px rgba(0,0,0,0.4);
+      z-index:999;
     }
 
-    @media(max-width: 768px) {
-      .about {
-        grid-template-columns: 1fr;
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn{
+      from{opacity:0; transform:translateY(20px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+
+    @keyframes slideUp{
+      from{opacity:0; transform:translateY(40px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+
+    @media(max-width:768px){
+      .about{
+        grid-template-columns:1fr;
       }
-      header {
-        flex-direction: column;
+      header{
+        flex-direction:column;
       }
     }
   </style>
@@ -206,9 +235,8 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
-  <h2>Horizon Exim</h2>
+  <h2>Anjaniputra Exim</h2>
   <nav>
     <a href="#about">About</a>
     <a href="#products">Products</a>
@@ -218,39 +246,39 @@
   </nav>
 </header>
 
-<!-- ===== SLIDER ===== -->
+<!-- SLIDER -->
 <div class="slider">
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d');">
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1589927986089-35812388d1b4');">
     <div class="slide-content">
       <h1>Fresh Mango Export Specialists</h1>
       <a class="btn">Read More</a>
     </div>
   </div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1606788075764-13c36e2e6c1a');">
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1592928300410-f9b6a3a64c02');">
     <div class="slide-content">
-      <h1>Premium Rice Exporter Solutions</h1>
+      <h1>Premium Fruits for Global Markets</h1>
       <a class="btn">Read More</a>
     </div>
   </div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1615484477778-ca3b77940c25');">
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1606788075764-13c36e2e6c1a');">
     <div class="slide-content">
-      <h1>India's Top Onion Exporter</h1>
+      <h1>Quality Onion & Vegetable Exporter</h1>
       <a class="btn">Read More</a>
     </div>
   </div>
 </div>
 
-<!-- ===== ABOUT ===== -->
+<!-- ABOUT -->
 <section id="about">
   <div class="about">
     <div>
       <h2 class="section-title">About Us</h2>
       <p>
-        At Horizon Exim, we don’t just export goods — we export trust, quality,
-        and long-term value. We provide seamless global shipping, customs
-        clearance, and freight forwarding services to global markets.
+        At <strong>Anjaniputra Exim</strong>, we don’t just export goods — we export
+        trust, quality, and long-term value. We ensure reliable global shipping,
+        quality assurance, and hassle-free exports.
       </p>
     </div>
     <div class="experience">
@@ -259,18 +287,18 @@
   </div>
 </section>
 
-<!-- ===== PRODUCTS ===== -->
+<!-- PRODUCTS -->
 <section id="products">
   <h2 class="section-title">Our Products</h2>
   <div class="products">
     <div class="product">Fruits</div>
     <div class="product">Vegetables</div>
-    <div class="product">Confectionery</div>
     <div class="product">Onions</div>
+    <div class="product">Confectionery</div>
   </div>
 </section>
 
-<!-- ===== FEATURES ===== -->
+<!-- FEATURES -->
 <section id="features">
   <h2 class="section-title">Our Features</h2>
   <div class="features">
@@ -280,61 +308,63 @@
   </div>
 </section>
 
-<!-- ===== STATS ===== -->
+<!-- STATS -->
 <section>
   <div class="stats">
-    <div class="stat"><h2>8+</h2>Years of Experience</div>
-    <div class="stat"><h2>2000+</h2>Tons Export Annually</div>
-    <div class="stat"><h2>20+</h2>Countries Exported</div>
+    <div class="stat"><h2>8+</h2>Years Experience</div>
+    <div class="stat"><h2>2000+</h2>Tons Exported</div>
+    <div class="stat"><h2>20+</h2>Countries</div>
     <div class="stat"><h2>1000+</h2>Happy Clients</div>
   </div>
 </section>
 
-<!-- ===== WHY US ===== -->
+<!-- WHY -->
 <section class="why">
-  <h2 class="section-title">Why Horizon Exim?</h2>
+  <h2 class="section-title">Why Anjaniputra Exim?</h2>
   <div class="why-items">
     <div>Honesty & Integrity</div>
-    <div>Innovation & Change</div>
+    <div>Innovation & Growth</div>
     <div>Teamwork</div>
-    <div>Open Communication</div>
-    <div>Variety of Products</div>
-    <div>Satisfaction Guarantee</div>
+    <div>Transparency</div>
+    <div>Wide Product Range</div>
+    <div>Customer Satisfaction</div>
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
+<!-- FAQ -->
 <section id="faq">
   <h2 class="section-title">FAQ</h2>
   <details>
     <summary>What products do you export?</summary>
-    <p>We export fruits, vegetables, spices, rice and more.</p>
+    <p>We export fruits, vegetables, onions and agri-products.</p>
   </details>
   <details>
-    <summary>Do you handle customs clearance?</summary>
-    <p>Yes, end-to-end logistics support.</p>
+    <summary>Do you handle logistics?</summary>
+    <p>Yes, complete export documentation & shipping.</p>
   </details>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer id="contact">
   <h2>Get in Touch</h2>
-  <p>Email: horizonexim2018@gmail.com</p>
+  <p>Email: anjaniputraexim@gmail.com</p>
   <p>Phone: +91 98987 89831</p>
   <p>Ahmedabad, Gujarat, India</p>
   <br>
-  <p>© 2026 Horizon Exim. All Rights Reserved.</p>
+  <p>© 2026 Anjaniputra Exim. All Rights Reserved.</p>
 </footer>
 
-<script>
-  const slides = document.querySelectorAll('.slide');
-  let index = 0;
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/919898789831" target="_blank">💬</a>
 
-  setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-  }, 4000);
+<script>
+  const slides=document.querySelectorAll('.slide');
+  let i=0;
+  setInterval(()=>{
+    slides[i].classList.remove('active');
+    i=(i+1)%slides.length;
+    slides[i].classList.add('active');
+  },4000);
 </script>
 
 </body>
